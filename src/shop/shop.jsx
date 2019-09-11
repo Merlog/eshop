@@ -1,8 +1,6 @@
 import React from "react";
 import SHOP_DATA from "./shop.data.js";
 
-import HomePage from "./../homepagepages/home";
-
 class ShopPage extends React.Component {
   constructor(props) {
     super(props);
