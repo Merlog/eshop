@@ -9,16 +9,19 @@ const INITIAL_STATE = {
 const cartReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case CartActionTypes.TOGGLE_CART_HIDDEN:
+      console.log("reducer hidden togle", state);
       return {
         ...state,
         hidden: !state.hidden
       };
     case CartActionTypes.ADD_ITEM:
+      console.log("reducer addItemToCart", state);
       return {
         ...state,
         cartItems: addItemToCart(state.cartItems, action.payload)
       };
     case CartActionTypes.REMOVE_ITEM:
+      console.removeItemFromCart("reducer addItemToCart", state);
       return {
         ...state,
         cartItems: removeItemFromCart(state.cartItems, action.payload)
